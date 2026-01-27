@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+dependency_graph*
+*.gv
+.env*
+.DS_Store
+Thumbs.db
+*.png
+.idea/
+*.iml
