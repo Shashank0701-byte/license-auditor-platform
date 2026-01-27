@@ -10,3 +10,5 @@ Thumbs.db
 .idea/
 *.iml
 db.sqlite3
+node_modules
+dist
