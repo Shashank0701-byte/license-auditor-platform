@@ -62,3 +62,19 @@ def list_scans(request):
     ]
 
     return Response(data)
+
+@api_view(['GET'])
+def scan_details(request, scan_id):
+    packages = PackageRisk.objects.filter(scan_id=scan_id)
+
+    data = [
+        {
+            "name": p.name,
+            "license": p.license,
+            "last_updated": p.last_updated,
+            "risks": p.risks
+        }
+        for p in packages
+    ]
+
+    return Response(data)
